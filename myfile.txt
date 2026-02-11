@@ -1,4 +1,5 @@
 first line 
 second line
 third line 
+Adding content from feature branch
 adding myfile line using master branch 
