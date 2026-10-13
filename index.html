@@ -1,10 +1,143 @@
+```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Git Practice</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server 1 | Development Environment</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #141e30, #243b55, #6a11cb);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 750px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.10);
+            padding: 45px 30px;
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .icon {
+            font-size: 65px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 38px;
+            color: #ffd166;
+            margin-bottom: 12px;
+        }
+
+        h2 {
+            color: #80ffdb;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            color: #eeeeee;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .status {
+            display: inline-block;
+            background: #d8f3dc;
+            color: #176b37;
+            padding: 10px 22px;
+            border-radius: 30px;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        .details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.12);
+            padding: 20px 12px;
+            border-radius: 15px;
+            border-bottom: 4px solid #ffd166;
+        }
+
+        .card h3 {
+            color: #80ffdb;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #ffffff;
+        }
+
+        footer {
+            margin-top: 30px;
+            color: #dddddd;
+            font-size: 13px;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Hello Ritthik 👋</h1>
-    <p>This is my Git practice project.</p>
+    <div class="container">
+
+        <div class="icon">🚀</div>
+
+        <h1>Welcome to Server 1</h1>
+        <h2>Development Environment</h2>
+
+        <p class="description">
+            Your cloud server is up and running!
+            This webpage is hosted on an AWS EC2 instance
+            using Apache HTTP Server.
+        </p>
+
+        <div class="status">● Server Status: Running</div>
+
+        <div class="details">
+            <div class="card">
+                <h3>☁️ Platform</h3>
+                <p>AWS EC2</p>
+            </div>
+
+            <div class="card">
+                <h3>🌐 Web Server</h3>
+                <p>Apache HTTPD</p>
+            </div>
+
+            <div class="card">
+                <h3>🛠️ Environment</h3>
+                <p>Development</p>
+            </div>
+        </div>
+
+        <footer>
+            Deployed automatically using EC2 User Data
+            <br>
+            Cloud • Automation • DevOps
+        </footer>
+
+    </div>
 </body>
 </html>
+```
