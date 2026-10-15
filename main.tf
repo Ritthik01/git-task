@@ -15,18 +15,15 @@ provider "aws" {
 resource "aws_instance" "example" {
   ami           = "ami-01a00762f46d584a1"
   instance_type = "t3.micro"
+  key_name = "fazoK"
+  
+  user_data = file("${path.module}/userdata.sh")
 
-  user_data = <<-EOF
-              #!/bin/bash
-              echo "Hello, World!" 
-              sudo apt update 
-              sudo apt install nginx -y 
-              sudo systemctl start nginx
-              sudo systemctl enable nginx
-              sudo echo ./index.html > /var/www/html/index.html
-              EOF
   tags = {
     Name = "ritthik-instance"
   }
 }
 
+output "public_ip" {
+  value = aws_instance.example.public_ip
+}
